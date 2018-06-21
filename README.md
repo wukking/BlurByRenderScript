@@ -3,4 +3,4 @@
 
 
 
-![ss1](\BlurByRenderScript\screenshot\ss1.gif)
+![ss1](\screenshot\ss1.gif)
