@@ -1,0 +1,2 @@
+# BlurByRenderScript
+使用RenderScript高斯模糊
