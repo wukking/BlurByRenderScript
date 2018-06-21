@@ -3,4 +3,4 @@
 
 
 
-![ss1](/screenshot/ss1.gif)
+![动态截图](/screenshot/ss1.gif)
