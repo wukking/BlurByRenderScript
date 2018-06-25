@@ -2,6 +2,7 @@ package com.wuyson.blurbyrenderscript;
 
 import android.graphics.Bitmap;
 import android.util.LruCache;
+import android.widget.ImageView;
 
 public class CacheUtils {
 
@@ -32,6 +33,7 @@ public class CacheUtils {
     public Bitmap getBitmapFromMemCache(String key) {
         return mMemoryCache.get(key);
     }
+
 
     public static void diskLru(){
 

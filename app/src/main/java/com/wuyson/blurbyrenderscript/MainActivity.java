@@ -2,14 +2,21 @@ package com.wuyson.blurbyrenderscript;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.PixelFormat;
 import android.graphics.drawable.BitmapDrawable;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 
 public class MainActivity extends AppCompatActivity {
     private ImageView mImgOriginal;
@@ -33,12 +40,13 @@ public class MainActivity extends AppCompatActivity {
         mImgOriginal = findViewById(R.id.img_original);
         btnBlur = findViewById(R.id.btn_blur);
 
+        Bitmap bitmap565 = BitmapUtils.bitmap2RGB_565(this, R.drawable.app_img_jessica, 100, 100);
+
 //        Bitmap bitmapIV = ((BitmapDrawable) mImgOriginal.getDrawable()).getBitmap();
         final Bitmap bitmap = BitmapUtils.decodeSampleBitmapFromResource(getResources(),R.drawable.app_img_jessica,
                 50,50);
 
         mBlurRs = new RenderScriptUtils(this);
-
 
         btnBlur.setOnClickListener(new View.OnClickListener() {
             @Override
