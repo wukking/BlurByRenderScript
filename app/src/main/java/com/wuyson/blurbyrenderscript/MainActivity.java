@@ -33,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
         mImgOriginal = findViewById(R.id.img_original);
         btnBlur = findViewById(R.id.btn_blur);
 
-        final Bitmap bitmap = ((BitmapDrawable) mImgOriginal.getDrawable()).getBitmap();
+//        Bitmap bitmapIV = ((BitmapDrawable) mImgOriginal.getDrawable()).getBitmap();
+        final Bitmap bitmap = BitmapUtils.decodeSampleBitmapFromResource(getResources(),R.drawable.app_img_jessica,
+                50,50);
 
         mBlurRs = new RenderScriptUtils(this);
 
